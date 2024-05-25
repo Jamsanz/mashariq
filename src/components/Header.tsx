@@ -8,13 +8,16 @@ import { useTranslation } from 'react-i18next';
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
   const { i18n, t } = useTranslation();
-
-  const handleOnChangeLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ar' : 'en')
-  }
-
+  
   const toggle = () => setOpen(!open);
   const close = () => open && setOpen(false);
+  
+  const handleOnChangeLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'ar' : 'en');
+    close();
+    location.reload();
+  }
+  
 
   return (
     <Menubar.Root
@@ -140,7 +143,7 @@ const Header = () => {
           </NavigationMenu.Item>
           <NavigationMenu.Item className=''>
             <NavigationMenu.Link className=" hover:bg-white hover:text-black rounded-full border py-2 px-3" asChild>
-              <Link data-testid="contact-us-link" to={"#"} onClick={() => { handleOnChangeLanguage();  close(); }}>
+              <Link data-testid="contact-us-link" to={"#"} onClick={handleOnChangeLanguage}>
                 {i18n.language === 'en' ? 'Arabic' : 'English'}
               </Link>
             </NavigationMenu.Link>
