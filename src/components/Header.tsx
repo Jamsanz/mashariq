@@ -83,7 +83,7 @@ const Header = () => {
                   <NavigationMenu.Item value="sub1">
                     <NavigationMenu.Link asChild>
                       <Link
-                        to={'/softwaredev'}
+                        to={'#'}
                         onClick={close}
                         className={`flex gap-x-4 hover:bg-black hover:text-white px-6 sm:px-6 py-2 sm:py-[14px]`}
                       >
@@ -95,7 +95,7 @@ const Header = () => {
                   <NavigationMenu.Item value="sub2">
                     <NavigationMenu.Link asChild>
                       <Link
-                        to={'/devops-consulting'}
+                        to={'#'}
                         onClick={close}
                         className={`flex gap-x-4 hover:bg-black hover:text-white px-6 sm:px-6 py-2 sm:py-[14px]`}
                       >
@@ -107,7 +107,7 @@ const Header = () => {
                   <NavigationMenu.Item value="sub3">
                     <NavigationMenu.Link asChild>
                       <Link
-                        to={'/devops-consulting'}
+                        to={'#'}
                         onClick={close}
                         className={`flex gap-x-4 hover:bg-black hover:text-white px-6 sm:px-6 py-2 sm:py-[14px]`}
                       >
@@ -122,21 +122,21 @@ const Header = () => {
           </NavigationMenu.Item>
           <NavigationMenu.Item className='hover:border-b-2 hover:-mt-1 md:hidden 2xl:block'>
             <NavigationMenu.Link asChild>
-              <Link to="/meet-the-team" onClick={close}>
+              <Link to="#" onClick={close}>
                 {t('tech_soln')}
               </Link>
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className='hover:border-b-2 hover:-mt-1 md:hidden 2xl:block'>
             <NavigationMenu.Link asChild>
-              <Link to="/meet-the-team" onClick={close}>
+              <Link to="#" onClick={close}>
                 {t('awareness')}
               </Link>
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className='hover:border-b-2 hover:-mt-1'>
             <NavigationMenu.Link className="" asChild>
-              <Link data-testid="contact-us-link" to="contact-us" onClick={close}>
+              <Link data-testid="contact-us-link" to="#" onClick={close}>
                 {t('contact')}
               </Link>
             </NavigationMenu.Link>
