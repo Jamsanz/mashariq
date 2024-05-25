@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+}
+@layer components {
+  .responsive-header {
+    @apply flex justify-between gap-16 items-center p-6 md:px-16 md:pb-4 md:py-8 z-50;
+  }
+  .navigation-content {
+    @apply absolute top-0 left-0 w-full sm:w-auto;
+  }
+
+  .navigation-menu {
+    @apply fixed top-[83px] md:relative md:top-0 block text-white bg-transparent left-0 md:left-0 md:w-auto w-full h-full z-50;
+  }
+
+  .navigation-list {
+    @apply flex flex-col -mt-2 md:flex-row gap-y-6 md:gap-y-0 w-full md:w-auto px-6 md:px-0 py-10 md:py-0 md:gap-x-[60px];
+  }
+  .custom-rotate-180 {
+    @apply relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180;
+  }
+
+  .active-link {
+    @apply text-[#356FB7];
+  }
+  .icon-circle {
+    @apply border border-white rounded-full z-10 bg-icon-circle absolute grid place-items-center hover:scale-110;
+  }
+  .animated-element {
+    opacity: 0;
+    transform: translateY(20px);
+    @apply snap-start transition-opacity transition-transform;
+  }
+  .btn-contact-gradient {
+    border-radius: 6px;
+    background: linear-gradient(
+      170deg,
+      #4091af 47.04%,
+      #5499a4 59.35%,
+      #64a09b 70.55%,
+      #96b47f 82.35%,
+      #fedf45 100.44%
+    );
+  }
+
+  .left-card-gradient {
+    background: linear-gradient(170deg, #4091af 21.67%, #639f9b 70.9%, #fedf45 98.21%);
+  }
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* utilities */
+.soft-shadow {
+  box-shadow: 0px 4px 10px 5px rgba(0, 96, 184, 0.1);
+}
+
+.slide-track {
+  animation: scroll linear 20s infinite;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel::before,
+.carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  z-index: 10;
+  height: 100%;
+}
+
+.carousel::before {
+  left: 0;
+  background: white;
+}
+
+.carousel::after {
+  right: 0;
+  background: white;
+}
+
+.slide-icons {
+  animation: scrollIcons linear 20s infinite;
+}
+
+.slide-track:hover,
+.slide-icons:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  flex-shrink: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.slide:hover {
+  transform: scale(1.2);
+}
+
+/* header */
+.background-blur {
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+/* Service card gradient-backgrounds */
+.bg-software-dev {
+  background: linear-gradient(180deg, #ecfcfe 0%, #cdf5fe 100%);
+}
+
+.bg-devops {
+  background: linear-gradient(180deg, #fefaf3 0%, #f6e6d4 100%);
+}
+
+.bg-software-test {
+  background: linear-gradient(180deg, #fbf9eb 0%, #fcf9e1 100%);
+}
+
+.bg-design-ui-ux {
+  background: linear-gradient(180deg, #ebfbf6 0%, #e6fce1 100%);
+}
+
+.bg-design-logo {
+  background: linear-gradient(180deg, #ecfcfe 0%, #cdf5fe 100%);
+}
+
+/* Contact Form */
+.bg-contact {
+  background-image: url('/assets/contact-patterns.png'), linear-gradient(180deg, #0d1a30 0%, #0d1a30 100%);
+}
+
+/* Contact Form */
+.bg-meet-the-team {
+  background-image: url('/assets/contact-patterns.png'), linear-gradient(180deg, #1e1e1e 0%, #1e1e1e 100%);
+}
+
+/* Stack section */
+
+.bg-stack {
+  background: linear-gradient(180deg, #080d10 14.65%, #3c3c3c 26.24%, #ccc 42.58%, #292e37 79.66%, #000 100%);
+}
+
+.bg-stack-image {
+  background-image: url('/assets/stack-bg.png');
+  backdrop-filter: blur(1px);
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.dlho-logo-card {
+  display: grid;
+  place-items: center;
+  border-radius: 24px;
+  position: relative;
+}
+
+.bg-readysetdev-hero,
+.dlho-logo-card-image {
+  background-image: url('/assets/readysetdev-image.png');
+}
+
+.bg-devops-hero {
+  background-image: url('/assets/devops-hero.png');
+}
+
+.dlho-logo-card-image,
+.bg-readysetdev-hero,
+.bg-devops-hero {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  filter: blur(2px);
+  border-radius: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* why choose dlho section */
+
+.bg-performance {
+  background: linear-gradient(137deg, #14c7ff 0%, #112777 49.59%, #082d8c 100%);
+}
+
+.bg-sub-performance {
+  background: linear-gradient(180deg, #072f74 0%, rgba(46, 60, 84, 0) 100%);
+}
+
+.circle {
+  color: white;
+  border: 1px solid #13da0f;
+}
+
+.circle-last {
+  color: white;
+  border: 0.641px solid #fff;
+}
+
+.line {
+  border-bottom: 0.641px solid white;
+}
+
+.bg-business {
+  background: linear-gradient(137deg, #ff9314 0%, #f5664e 49.59%, #f4644f 100%);
+}
+
+.bg-business-sub {
+  background-image: url('/assets/stack-patterns.png'), linear-gradient(137deg, #ff9314 0%, #f5664e 49.59%, #f4644f 100%);
+}
+
+.bg-icon-circle {
+  background: rgba(255, 255, 255, 0.29);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #fff;
+  }
+}
+
+/* animations */
+@media (width < 600px) {
+  .slide-in-top-mobile {
+    -webkit-animation: slide-in-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .bg-stack {
+    background: linear-gradient(180deg, #1c2022 2.14%, #5b5b5b 26.24%, #ccc 42.58%, #292e37 79.66%, #000 80.03%);
+  }
+
+  .slide-track {
+    animation: scrollMobile linear 10s infinite;
+  }
+
+  .slide-icons {
+    animation: scrollIcons linear 40s infinite;
+  }
+
+  .slide:hover {
+    transform: scale(1.2);
+  }
+
+  .carousel::after,
+  .carousel::before {
+    width: 24px;
+  }
+}
+
+.slide-in-top {
+  -webkit-animation: slide-in-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.flip-in-hor-top {
+  -webkit-animation: flip-in-hor-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: flip-in-hor-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
