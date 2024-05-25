@@ -11,7 +11,7 @@ const Hero = () => {
 
 
   const heroImageBackgroundWrapper: CSSProperties = {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.0)), url("/assets/cyber-2.jpeg")`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.0)), url("/assets/cyber-3.jpeg")`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
