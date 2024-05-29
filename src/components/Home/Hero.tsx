@@ -35,9 +35,7 @@ const Hero = () => {
           <p className="3xl:text-[24px] mx-auto max-w-[300px] md:max-w-[500px] text-white mb-10 xl:max-w-[699px]">
             {t('banner_description')}
           </p>
-          <ButtonLink to={'/contact-us'} className="bg-[#fff] border-none text-center text-[#212121]">
-            {t('contact_us')}
-          </ButtonLink>
+          <a className="px-6 lg:py-3 hover:bg-[#003285] font-medium hover:text-white w-fit border text-lg border-black rounded-full py-2 fold:text-xs inline-flex gap-2 justify-center items-center bg-[#fff] border-none text-center text-[#212121]" href="#contact-us"> {t('contact_us')} </a>
         </div>
         <div className="w-full absolute md:block -bottom-1 ">
           <svg
