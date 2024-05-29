@@ -48,12 +48,9 @@ const InformationCard: FC<IInformationCard> = (props) => {
             dangerouslySetInnerHTML={{ __html: content }}
           />
         </div>
-        {
-          !content.includes(`<li class="flex">`) &&
-          <button onClick={() => toggle((prev) => !prev)} className="2xl:invisible font-bold capitalize underline mt-1">
-            {show ? t('see_less') : t('see_more')}
-          </button>
-        }
+        <button onClick={() => toggle((prev) => !prev)} className="2xl:invisible font-bold capitalize underline mt-1">
+          {show ? t('see_less') : t('see_more')}
+        </button>
       </div>
       <div
         data-aos="fade-left"
