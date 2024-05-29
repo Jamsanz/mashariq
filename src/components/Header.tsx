@@ -4,6 +4,7 @@ import { CaretDownIcon, HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-ic
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { MdOutlineSecurity } from "react-icons/md";
 
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -27,9 +28,9 @@ const Header = () => {
         }`}
       data-testid="header"
     >
-      <Link to="/" className="lg:ml-[46px] font-workSans">
+      <Link to="/" className="lg:ml-[46px] w-fit font-jakarta inline-flex items-center gap-2 text-lg md:text-2xl">
         {/* <img src="/assets/dlho-logo6.png" className="w-[64px] md:w-[100px]" alt="DLHO Logo" /> */}
-        Mashariq
+        <MdOutlineSecurity />{" "}{t('mashariq')}
       </Link>
       {/* Mobile menu Icons/buttons */}
       <HamburgerMenuIcon
@@ -136,9 +137,9 @@ const Header = () => {
           </NavigationMenu.Item>
           <NavigationMenu.Item className='hover:border-b-2 hover:-mt-1'>
             <NavigationMenu.Link className="" asChild>
-              <Link data-testid="contact-us-link" to="#" onClick={close}>
+              <a data-testid="contact-us-link" href="#contact-us" onClick={close}>
                 {t('contact')}
-              </Link>
+              </a>
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className=''>

@@ -11,14 +11,14 @@ const Hero = () => {
 
 
   const heroImageBackgroundWrapper: CSSProperties = {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.0)), url("/assets/view-2.jpeg")`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.0)), url("/assets/view-3.jpeg")`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
   return (
     <header
       style={heroImageBackgroundWrapper}
-      className="h-[65vh] md:h-screen relative bg-bottom md:bg-bottom"
+      className="h-[65vh] md:h-screen lg:bg-fixed relative bg-bottom md:bg-bottom"
     >
       <div className="bg-[rgba(0,0,0,0.5)] absolute top-0 left-0 w-full" />
       <Header />

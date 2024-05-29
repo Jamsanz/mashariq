@@ -18,7 +18,7 @@ const AboutUs = () => {
         <div
           data-aos="fade-up"
           data-testid="service-card"
-          className={`pl-[30px] flex-1 hover:bg-black hover:text-white max-w-[400px] shadow md:max-w-[340px] lg:max-w-[384px] pr-[22px] cursor-pointer md:!px-[30px] py-10 rounded-2xl hover:shadow-md`}
+          className={`pl-[30px] flex-1 hover:bg-[#003285] hover:text-white max-w-[400px] shadow md:max-w-[340px] lg:max-w-[384px] pr-[22px] cursor-pointer md:!px-[30px] py-10 rounded-2xl hover:shadow-md`}
         >
           <PiTargetDuotone className="block mb-6 md:mb-10 w-10 h-10 md:w-20 md:h-20" />
           <h3 className="text-[18px] md:text-[22px] md:tracking-[-0.44px] font-semibold mb-4 font-jakarta">
@@ -29,7 +29,7 @@ const AboutUs = () => {
         <div
           data-aos="fade-up"
           data-testid="service-card"
-          className={`pl-[30px] flex-1 hover:bg-black hover:text-white max-w-[400px] shadow md:max-w-[340px] lg:max-w-[384px] pr-[22px] cursor-pointer md:!px-[30px] py-10 rounded-2xl hover:shadow-md`}
+          className={`pl-[30px] flex-1 hover:bg-[#003285] hover:text-white max-w-[400px] shadow md:max-w-[340px] lg:max-w-[384px] pr-[22px] cursor-pointer md:!px-[30px] py-10 rounded-2xl hover:shadow-md`}
         >
           <HiOutlineEye className="block mb-6 md:mb-10 w-10 h-10 md:w-20 md:h-20" />
           <h3 className="text-[18px] md:text-[22px] md:tracking-[-0.44px] font-semibold mb-4 font-jakarta">
@@ -40,7 +40,7 @@ const AboutUs = () => {
         <div
           data-aos="fade-up"
           data-testid="service-card"
-          className={`pl-[30px] flex-1 hover:bg-black hover:text-white max-w-[400px] shadow md:max-w-[340px] lg:max-w-[384px] pr-[22px] cursor-pointer md:!px-[30px] py-10 rounded-2xl hover:shadow-md`}
+          className={`pl-[30px] flex-1 hover:bg-[#003285] hover:text-white max-w-[400px] shadow md:max-w-[340px] lg:max-w-[384px] pr-[22px] cursor-pointer md:!px-[30px] py-10 rounded-2xl hover:shadow-md`}
         >
           <IoDiamondOutline className="block mb-6 md:mb-10 w-10 h-10 md:w-20 md:h-20" />
           <h3 className="text-[18px] md:text-[22px] md:tracking-[-0.44px] font-semibold mb-4 font-jakarta">
