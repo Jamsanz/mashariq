@@ -4,6 +4,7 @@ import { CaretDownIcon, HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-ic
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { MdOutlineSecurity } from "react-icons/md";
 
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -27,9 +28,9 @@ const Header = () => {
         }`}
       data-testid="header"
     >
-      <Link to="/" className="lg:ml-[46px] font-workSans">
+      <Link to="/" className="lg:ml-[46px] w-fit font-jakarta inline-flex items-center gap-2 text-lg md:text-2xl">
         {/* <img src="/assets/dlho-logo6.png" className="w-[64px] md:w-[100px]" alt="DLHO Logo" /> */}
-        Mashariq
+        <MdOutlineSecurity />{" "}{t('mashariq')}
       </Link>
       {/* Mobile menu Icons/buttons */}
       <HamburgerMenuIcon
@@ -83,7 +84,7 @@ const Header = () => {
                   <NavigationMenu.Item value="sub1">
                     <NavigationMenu.Link asChild>
                       <Link
-                        to={'/softwaredev'}
+                        to={'#'}
                         onClick={close}
                         className={`flex gap-x-4 hover:bg-black hover:text-white px-6 sm:px-6 py-2 sm:py-[14px]`}
                       >
@@ -95,7 +96,7 @@ const Header = () => {
                   <NavigationMenu.Item value="sub2">
                     <NavigationMenu.Link asChild>
                       <Link
-                        to={'/devops-consulting'}
+                        to={'#'}
                         onClick={close}
                         className={`flex gap-x-4 hover:bg-black hover:text-white px-6 sm:px-6 py-2 sm:py-[14px]`}
                       >
@@ -107,7 +108,7 @@ const Header = () => {
                   <NavigationMenu.Item value="sub3">
                     <NavigationMenu.Link asChild>
                       <Link
-                        to={'/devops-consulting'}
+                        to={'#'}
                         onClick={close}
                         className={`flex gap-x-4 hover:bg-black hover:text-white px-6 sm:px-6 py-2 sm:py-[14px]`}
                       >
@@ -122,23 +123,23 @@ const Header = () => {
           </NavigationMenu.Item>
           <NavigationMenu.Item className='hover:border-b-2 hover:-mt-1 md:hidden 2xl:block'>
             <NavigationMenu.Link asChild>
-              <Link to="/meet-the-team" onClick={close}>
+              <Link to="#" onClick={close}>
                 {t('tech_soln')}
               </Link>
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className='hover:border-b-2 hover:-mt-1 md:hidden 2xl:block'>
             <NavigationMenu.Link asChild>
-              <Link to="/meet-the-team" onClick={close}>
+              <Link to="#" onClick={close}>
                 {t('awareness')}
               </Link>
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className='hover:border-b-2 hover:-mt-1'>
             <NavigationMenu.Link className="" asChild>
-              <Link data-testid="contact-us-link" to="contact-us" onClick={close}>
+              <a data-testid="contact-us-link" href="#contact-us" onClick={close}>
                 {t('contact')}
-              </Link>
+              </a>
             </NavigationMenu.Link>
           </NavigationMenu.Item>
           <NavigationMenu.Item className=''>

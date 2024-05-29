@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <header
       style={heroImageBackgroundWrapper}
-      className="h-[65vh] md:h-screen relative bg-bottom md:bg-bottom"
+      className="h-[65vh] md:h-screen lg:bg-fixed relative bg-bottom md:bg-bottom"
     >
       <div className="bg-[rgba(0,0,0,0.5)] absolute top-0 left-0 w-full" />
       <Header />
