@@ -1,7 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import ButtonLink from "../ButtonLink";
 import Header from "../Header"
-// import Banner from "../../assets/hero-1.png";
 import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 
